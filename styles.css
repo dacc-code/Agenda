@@ -155,3 +155,9 @@ td button:last-child {
     padding: 0.6rem;
   }
 }
+
+tr.completed td {
+  text-decoration: line-through;
+  color: #888;
+  background-color: #f0f4f8;
+}
