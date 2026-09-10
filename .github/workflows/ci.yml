@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Syntax check
+        run: node --check app.js
+
+      - name: Required files
+        run: |
+          test -f index.html || (echo "falta index.html" && exit 1)
+          test -f styles.css || (echo "falta styles.css" && exit 1)
+          test -f app.js || (echo "falta app.js" && exit 1)
