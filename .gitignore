@@ -1,0 +1,9 @@
+# Frontend estático sin dependencias: no hay nada que compilar ni instalar.
+# Solo ignorar entorno, sistema y editores. Nunca commitear secretos.
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
