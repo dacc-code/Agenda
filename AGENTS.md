@@ -51,7 +51,7 @@ Sin package manager, linter, tests ni CI.
 ## Testing / Lint / Build
 
 - Sin suite. Verificación mínima: `node --check app.js` + flujo manual (alta, fecha pasada, toggle, editar, eliminar, filtros, persistencia tras recarga).
-- TODO: tests de validación/filtros + CI con `node --check`.
+- TODO: tests de validación/filtros. CI: `.github/workflows/ci.yml` (node --check + archivos).
 - Conocidos (no corregir sin aprobación): `thead` con 4 `<th>` vs filas de 5 `<td>`; botones `.filters` ausentes en `index.html`.
 
 ## Deployment
